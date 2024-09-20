@@ -3,7 +3,7 @@
     padding: 0;
 }
 .active{
-    background-color:  #4271ef;
+    background-color:  #00040f80;
     color: rgb(255, 255, 255);
 }
 
@@ -12,15 +12,18 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(120, 146, 160);
+    background-color: rgba(3, 37, 56, 0.735);
     position: sticky;
     top: 0;
-    flex:1;
+    flex:1.5;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+
 }
 #brand{
     text-decoration: none;
     font-size: 1.5rem;
-    margin: 0.5rem;
+    margin: 1.5rem;
     font-weight: bold;
     color: white;
 }
@@ -39,7 +42,8 @@ nav ul li a{
     border-radius: 0.5rem;
 }
 nav ul li a:not(.active):hover{
-    background-color: rgb(160, 181, 193);
+    background-color: rgba(21, 90, 130, 0.566);
+    color: aliceblue;
 }
 .menu{
     display: none;

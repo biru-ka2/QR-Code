@@ -6,6 +6,9 @@ import './Generator.css'
 function Generator() {
   const [url, setUrl] = useState("");
   const [qr, setQr] = useState("");
+  const [color, setColor] = useState("#485261");
+  const [bgColor, setBgColor] = useState("#e6f0ff");
+
   // function to generate qr code
   const GenerateQRCode = () => {
     QRCode.toDataURL(
@@ -14,9 +17,8 @@ function Generator() {
         width: 800,
         margin: 2,
         color: {
-          dark: '#485261',
-          light: '#e6f0ff'
-        },
+          dark: color,
+          light: bgColor },
       },
       (err, url) => {
         if (err) return console.log(err);

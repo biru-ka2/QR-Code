@@ -94,7 +94,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url('./assets/qrback.png');
+  background-size: contain;
+  background-image: url('https://cdn.vectorstock.com/i/500p/84/65/abstract-white-monochrome-background-vector-32028465.jpg');
+  /* background-image: url('https://asset.gecdesigns.com/img/background-templates/dark-blue-background-with-the-diamond-pattern-template-sr06012408-1704699724568-cover.webp'); */
 }
 
 /* footer */

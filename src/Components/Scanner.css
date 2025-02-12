@@ -41,3 +41,31 @@
     justify-content: center;
     align-items: center;
 }
+
+.result-div{
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.result{
+    color: #ffffff;
+    font-size:1.5rem;
+
+}
+.result-rescan{
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.rescan{
+    background: #000;
+    margin-top: 10px;
+    padding: 10px;
+    width:50%;
+    color: white;
+
+}

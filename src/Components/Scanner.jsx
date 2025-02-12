@@ -35,19 +35,22 @@ export default function Scanner() {
       setScanError('Failed to access camera. Please check permissions.');
     }
   };
-
   const captureAndScan = async () => {
     if (videoRef.current && canvasRef.current) {
       const context = canvasRef.current.getContext('2d');
       context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
-
+  
       try {
         const result = await codeReader.current.decodeFromCanvas(canvasRef.current);
         setScanResult(result.getText());
+        setScanError('');
         stopScanner();
       } catch (err) {
         console.error('Scan Error:', err);
         setScanError('No QR code detected. Please try again.');
+  
+        // Automatically clear error message after 3 seconds
+        setTimeout(() => setScanError(''), 3000);
       }
     }
   };
@@ -82,7 +85,14 @@ export default function Scanner() {
     onDrop,
     accept: 'image/*',
   });
-
+  const [copyText, setCopyText] = useState('Copy'); // State for button text
+  const handleCopy = () => {
+    navigator.clipboard.writeText(scanResult);
+    setCopyText('Copied!'); // Change button text
+    
+    // Reset text back to "Copy" after 2 seconds
+    setTimeout(() => setCopyText('Copy'), 2000);
+  };
   return (
     <div className="scanner main-center-70vw">
       <h1 className="main-header">QR Reader</h1>
@@ -109,11 +119,23 @@ export default function Scanner() {
       <img ref={imgRef} alt="QR Code" style={{ display: 'none' }} />
 
       {scanResult && (
-        <div style={{ marginTop: '20px' }}>
-          <p><strong>Scanned Result:</strong> {scanResult}</p>
-          <button onClick={() => { setScanResult(''); setScanError(''); setMode(''); }}>Rescan</button>
-        </div>
-      )}
+  <div className='result-rescan' style={{ marginTop: '20px' }}>
+    <div className='result-div'>Scanned Result: {scanResult}</div>
+    
+    {/* Copy to Clipboard Button */}
+    <button className='copy-button' onClick={handleCopy}>
+      {copyText} {/* Dynamic button text */}
+    </button>
+
+    <button 
+      className='rescan' 
+      onClick={() => { setScanResult(''); setScanError(''); setMode(''); }}
+    >
+      Rescan
+    </button>
+  </div>
+)}
+
 
       {scanError && (
         <div style={{ marginTop: '20px', color: 'red' }}>

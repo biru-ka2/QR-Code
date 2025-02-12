@@ -40,7 +40,7 @@ input{
     color: white;
 }
 .generate-btn{
-    margin: 10px;
+    margin-bottom: 10px;
     outline: none;
     color: white;
     border: none;
@@ -49,9 +49,18 @@ input{
 
 .generate-btn:hover{
     outline: none;
+    color: rgb(0, 0, 0);
+
 }
 
+.main-header{
+    margin-bottom: 10px;
+}
+.main-center-70vw{
+    padding: 10px;
+}
 
-
-
+.search{
+    width: 50%;
+}
 

@@ -32,7 +32,7 @@ function Generator() {
   return (
     <div className="generator main-center-70vw">
       <h1 className='main-header'>QR Generator</h1>
-      <input
+      <input className='search'
         type="text"
         placeholder='e.g. https://google.com'
         value={url}

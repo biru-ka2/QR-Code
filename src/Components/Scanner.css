@@ -5,12 +5,13 @@
 }
 
 .scanner{
-    background-color: rgba(0, 0, 1, 0.626);
     display: flex;
-    height: 80%;
+    height: 90%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
+
 }
 .scanner-option{
     display: flex;
@@ -27,7 +28,13 @@
     justify-content: center;
     align-items: center;
     color: rgb(47, 47, 47);
-
+}
+.camera-scan:hover{
+    /* #545c5f */
+        background: #545c5f;
+        border: none;
+        color: rgb(255, 255, 255);
+      
 }
 
 .upload{
@@ -41,6 +48,13 @@
     justify-content: center;
     align-items: center;
 }
+.upload:hover{
+    /* #545c5f */
+        background: #545c5f;
+        border: none;
+        color: rgb(255, 255, 255);
+      
+}
 
 .result-div{
     background: #ffffff;
@@ -48,7 +62,7 @@
 }
 .result{
     color: #ffffff;
-    font-size:1.5rem;
+    font-size:1.2rem;
 
 }
 .result-rescan{

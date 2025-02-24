@@ -42,7 +42,7 @@ function Generator() {
       {qr &&(
         <>
           <img className='img' src={qr} alt="qr-image" />
-          <button className='download'><a href={qr} download={'qrcode.png'}>Download</a></button>
+          <button className='download'><a className='download' href={qr} download={'qrcode.png'}>Download</a></button>
         </>
       )}
 

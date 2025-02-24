@@ -19,7 +19,14 @@
   width: 70vw;
   padding: 2rem;
   border-radius: 50px;
-  border:1px solid rgb(174, 164, 164)
+  border:1px solid rgb(142, 137, 137);
+  display: flex;
+  box-shadow: 4px 4px 10px rgba(58, 154, 238, 0.2);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(0, 10, 19, 0.578); */
+  background-color: rgba(0, 24, 46, 0.461);
 }
 
 
@@ -28,7 +35,6 @@ body {
   overflow: auto; /* Hide scrollbars */
 }
 .home{
-  background-color: rgba(13, 16, 73, 0.568);
   display: flex;
   height: 80%;
   flex-direction: column;
@@ -38,7 +44,17 @@ body {
 /* generator and scanner */
 
 .btn.generator a{
-  color: white;
+  color: rgb(255, 255, 255);
+}
+.btn.generator:hover{
+  background: #545c5f;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.btn.scanner:hover{
+  background: #545c5f;
+  border: none;
+  color: rgb(255, 255, 255);
 }
 .btn.scanner a{
   color: white;
@@ -64,21 +80,22 @@ body {
 
 .main-header{
   font-size: 2rem;
-  color: white;
+  color: rgba(8, 0, 0, 0.779);
 }
 /* for home btn */
 .btn{
-  border: 1px solid rgb(116, 105, 105);
+  border: 1px solid rgb(255, 255, 255);
   width: 20rem;
-  height: 100px;
-  margin:40px 0;
+  height: 20rem;
+  margin:25px 0 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.76rem;
-  color: rgb(255, 255, 255);
-  background-color: rgba(113, 53, 255, 0.995);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   border-radius: 25px;
+  
 }
 
 
@@ -94,16 +111,17 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-size: contain;
-  background-image: url('https://cdn.vectorstock.com/i/500p/84/65/abstract-white-monochrome-background-vector-32028465.jpg');
+  background-size: cover;
+  /* background-image: url('https://cdn.vectorstock.com/i/500p/84/65/abstract-white-monochrome-background-vector-32028465.jpg'); */
   /* background-image: url('https://asset.gecdesigns.com/img/background-templates/dark-blue-background-with-the-diamond-pattern-template-sr06012408-1704699724568-cover.webp'); */
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-blue-gradient-web-ui-background-image_518658.jpg');
 }
 
 /* footer */
 .footer {
   margin: 0 0 0 0;
   /* height: 30px; */
-  background-color: rgba(5, 36, 36, 0.881);
+  background-color: rgba(51, 69, 92, 0.881);
   display: flex;
   color: rgb(197, 196, 196);
   justify-content: center;

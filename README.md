@@ -10,7 +10,7 @@
 A simple yet powerful **QR Code Generator & Scanner** built with **React.js**.  
 Generate and scan QR codes instantly with a clean and responsive UI.  
 
-🌐 **Live Demo** → [QR Code App](https://qr-code-hc6s.vercel.app/)
+
 
 ---
 
@@ -48,10 +48,10 @@ Example placeholders:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/your-username/qr-code-app.git
+$ git clone https://github.com/biru-ka2/QR-Code.git
 
 # Navigate to project folder
-$ cd qr-code-app
+$ cd Qr-Code-app
 
 # Install dependencies
 $ npm install
